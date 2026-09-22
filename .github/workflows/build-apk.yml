@@ -17,10 +17,10 @@ steps:
 * name: Checkout Repository
 uses: actions/checkout@v4
 
-### New Step: Unzips your project files automatically
+### Fixed Step: Wrapped the command in quotes so YAML doesn't error out
 
 * name: Extract Project ZIP
-run: unzip *.zip
+run: "unzip *.zip"
 * name: Set up JDK 17
 uses: actions/setup-java@v4
 with:
